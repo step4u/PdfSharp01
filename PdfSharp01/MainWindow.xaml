@@ -1,0 +1,22 @@
+﻿<Window x:Class="PdfSharp01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PdfSharp01"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn0" Content="샘플1" Grid.Row="0" Width="100" Margin="10" />
+        <Button x:Name="btn1" Content="샘플2" Grid.Row="1" Width="100" Margin="10" />
+        <Button x:Name="btn2" Content="샘플3" Grid.Row="2" Width="100" Margin="10" />
+    </Grid>
+</Window>
