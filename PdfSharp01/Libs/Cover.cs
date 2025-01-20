@@ -19,7 +19,7 @@ namespace HelloMigraDoc
             var paragraph = section.AddParagraph();
             paragraph.Format.SpaceAfter = "3cm";
 
-            var imagePath = IOUtility.GetAssetsPath("migradoc/images/MigraDoc-landscape.png");
+            var imagePath = IOUtility.GetAssetsPath("d:\\04.jpg");
             var image = section.AddImage(imagePath);
             image.Width = "10cm";
 

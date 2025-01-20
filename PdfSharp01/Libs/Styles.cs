@@ -20,14 +20,25 @@ namespace HelloMigraDoc
             // Because all styles are derived from Normal, the next line changes the 
             // font of the whole document. Or, more exactly, it changes the font of
             // all styles and paragraphs that do not redefine the font.
-            style.Font.Name = "Arial";
+            style.Font.Name = "¸¼Àº °íµñ";
+            style.Font.Size = 12;
+            style.Font.Bold = false;
 
             // Heading1 to Heading9 are predefined styles with an outline level. An outline level
             // other than OutlineLevel.BodyText automatically creates the outline (or bookmarks) 
             // in PDF.
 
+            document.AddStyle("Title", StyleNames.Normal);
+            style = document.Styles["Title"];
+            style.Font.Bold = false;
+            style.Font.Size = 28;
+            style.Font.Name = "HYHeadLine";
+            style.ParagraphFormat.Alignment = ParagraphAlignment.Center;
+            style.ParagraphFormat.SpaceBefore = Unit.FromCentimeter(2);
+            style.ParagraphFormat.SpaceAfter = Unit.FromCentimeter(1);
+
             style = document.Styles[StyleNames.Heading1];
-            style.Font.Name = "Times New Roman";
+            style.Font.Name = "¸¼Àº °íµñ";
             style.Font.Size = 16;
             style.Font.Color = Colors.DarkBlue;
             style.ParagraphFormat.PageBreakBefore = true;
@@ -44,7 +55,9 @@ namespace HelloMigraDoc
 
             style = document.Styles[StyleNames.Heading3];
             style.Font.Size = 12;
-            style.Font.Italic = true;
+            style.Font.Italic = false;
+            style.Font.Bold = true;
+            style.Font.Color = Colors.Black;
             style.ParagraphFormat.SpaceBefore = 6;
             style.ParagraphFormat.SpaceAfter = 3;
 
